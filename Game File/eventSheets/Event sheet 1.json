@@ -1,0 +1,939 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "countExit",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 274068924583622
+		},
+		{
+			"eventType": "variable",
+			"name": "characterName",
+			"type": "string",
+			"initialValue": "seeChar",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 282244118019351
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Sprite",
+					"sid": 665040096761764,
+					"parameters": {
+						"object": "tile"
+					}
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Sprite",
+					"sid": 309986146185139,
+					"behaviorType": "8Direction"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-controls",
+					"objectClass": "Sprite",
+					"sid": 298441679775820,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"default-controls": false
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Sprite",
+					"sid": 629516373115494,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"speed": "2000"
+					}
+				}
+			],
+			"sid": 536702367914744
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Sprite",
+					"sid": 334889080670636,
+					"parameters": {
+						"object": "tile"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Sprite",
+					"sid": 159905482431313,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-controls",
+					"objectClass": "Sprite",
+					"sid": 607633889074442,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"default-controls": true
+					}
+				}
+			],
+			"sid": 804227819474293,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 226203801835122,
+					"parameters": {
+						"object": "solidWall"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Sprite",
+					"sid": 692624423423536,
+					"behaviorType": "8Direction"
+				}
+			],
+			"sid": 751153660750770
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Sprite",
+					"sid": 118061458799486,
+					"behaviorType": "8Direction"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 674644648833143,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "Sprite",
+					"sid": 943579394095238,
+					"disabled": true,
+					"parameters": {
+						"speed": "10"
+					}
+				}
+			],
+			"sid": 349168940356699,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Sprite",
+							"sid": 616355287849163,
+							"parameters": {
+								"instance-variable": "moving"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 717281395833986,
+							"parameters": {
+								"audio-file": "slide",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Sprite",
+							"sid": 226108006907173,
+							"parameters": {
+								"instance-variable": "moving",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 441306055651297
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 938215764513105
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 881396147428989,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Sprite",
+					"sid": 158305267868544,
+					"parameters": {
+						"instance-variable": "moving",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "Sprite",
+					"sid": 410017867407268,
+					"disabled": true,
+					"parameters": {
+						"speed": "0"
+					}
+				}
+			],
+			"sid": 417213386569561
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 956250483078995,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Sprite",
+					"sid": 406315049091923,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite",
+					"sid": 258268551380902,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 574791711250749
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 782708418662409,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Sprite",
+					"sid": 360087206540268,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite",
+					"sid": 813351973792143,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 516512831323379
+		},
+		{
+			"eventType": "comment",
+			"text": "go back"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 403591120386019,
+					"parameters": {
+						"object": "BtnBack"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 940789637886314
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 794288604106707,
+					"parameters": {
+						"layout": "home"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 942018201689223,
+					"parameters": {
+						"variable": "countExit",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 566439722831547
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 208673321527037,
+					"parameters": {
+						"object": "Joystick2"
+					}
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Sprite",
+					"sid": 810389939488683,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 512228565276978,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "up"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Joystick2",
+							"sid": 237917029560841,
+							"parameters": {
+								"instance-variable": "key",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 180777158418584,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 295675214738267
+				},
+				{
+					"eventType": "comment",
+					"text": "kanan"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Joystick2",
+							"sid": 509939227849905,
+							"parameters": {
+								"instance-variable": "key",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 565525768422221,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Sprite",
+							"sid": 306967424817568,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 566509831580976
+				},
+				{
+					"eventType": "comment",
+					"text": "kiri"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Joystick2",
+							"sid": 226847247054091,
+							"parameters": {
+								"instance-variable": "key",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 403099924857208,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Sprite",
+							"sid": 896434087826743,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 989387389695769
+				},
+				{
+					"eventType": "comment",
+					"text": "bwh"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Joystick2",
+							"sid": 727432898832581,
+							"parameters": {
+								"instance-variable": "key",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 666175872978501,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 691977794631704
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "feedback"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 886316640747062,
+					"parameters": {
+						"object": "Joystick2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Joystick2",
+					"sid": 843602926378217,
+					"parameters": {
+						"opacity": "70"
+					}
+				}
+			],
+			"sid": 547410754732337
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 499450042232180
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Joystick2",
+					"sid": 966045315087209,
+					"parameters": {
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 952828337825739
+		},
+		{
+			"eventType": "comment",
+			"text": "menang"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 929553969149343,
+					"parameters": {
+						"object": "Sprite3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 904368918147476,
+					"parameters": {
+						"layout": "Sprite3.namaLevel"
+					}
+				}
+			],
+			"sid": 847882280255458
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 106998500935256
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SpriteFont",
+					"sid": 970219722656603,
+					"parameters": {
+						"instance-variable": "isMoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite",
+					"sid": 301139817630837,
+					"parameters": {
+						"animation": "characterName",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 990090318161967,
+					"parameters": {
+						"text": "money"
+					}
+				}
+			],
+			"sid": 854236311650622,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 578261010785375,
+							"parameters": {
+								"variable": "petName",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Pet_ikut",
+							"sid": 220377094557551
+						}
+					],
+					"sid": 968727337724404
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 597777341724709
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Pet_ikut",
+							"sid": 395818291397125,
+							"parameters": {
+								"animation": "petName",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 889484742629773
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "dapat coins"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 857980155857373,
+					"parameters": {
+						"object": "Sprite4"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SpriteFont",
+					"sid": 947120375928375,
+					"parameters": {
+						"instance-variable": "isMoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite4",
+					"sid": 840971450318830
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 958222341375081,
+					"parameters": {
+						"variable": "money",
+						"value": "10"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 556016580049100,
+					"parameters": {
+						"text": "money"
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "LocalStorage",
+					"sid": 627812056094530,
+					"parameters": {
+						"key": "SAVE_COINS",
+						"value": "money"
+					}
+				}
+			],
+			"sid": 693001459905879
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "Sprite",
+					"sid": 567611052227732
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 440365441097176,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 954308659351037
+				}
+			],
+			"sid": 441524668128947
+		},
+		{
+			"eventType": "comment",
+			"text": "boss"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 378014524204952,
+					"parameters": {
+						"object": "Sprite15"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 892813104885119
+				}
+			],
+			"sid": 965576212804595
+		},
+		{
+			"eventType": "comment",
+			"text": "player dan pet berjauhan --> pet ikut"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 963723701272806,
+					"parameters": {
+						"first-value": "abs(distance(Sprite.X, Sprite.Y, Pet_ikut.X, Pet_ikut.Y))",
+						"comparison": 4,
+						"second-value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "Pet_ikut",
+					"sid": 117616439502843,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Sprite.X+ (40*sign(Self.X-Sprite.X))",
+						"y": "Sprite.Y+30",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 262230629468245
+		},
+		{
+			"eventType": "comment",
+			"text": "kekanan"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Pet_ikut",
+					"sid": 470282476272679,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "Sprite.X"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Pet_ikut",
+					"sid": 580391701152310,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 500043508177235
+		},
+		{
+			"eventType": "comment",
+			"text": "kekiri"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 875616759453242
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Pet_ikut",
+					"sid": 358342373532394,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 568875622577821
+		},
+		{
+			"eventType": "comment",
+			"text": "animation gerak"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Pet_ikut",
+					"sid": 113365252112423,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "Pet_ikut",
+					"sid": 847510442653851,
+					"parameters": {
+						"speed": "10"
+					}
+				}
+			],
+			"sid": 406302830143983
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 784180358230570
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "Pet_ikut",
+					"sid": 658255332549688,
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Pet_ikut",
+					"sid": 304703108808523,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 385293793324991
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 564322867822958
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 550708989569827,
+					"parameters": {
+						"audio-file": "startgame",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"start\""
+					}
+				}
+			],
+			"sid": 162000450319504
+		}
+	],
+	"sid": 991181321091608
+}

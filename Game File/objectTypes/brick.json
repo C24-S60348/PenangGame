@@ -1,0 +1,53 @@
+{
+	"name": "brick",
+	"plugin-id": "Sprite",
+	"sid": 139142042439688,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 434,
+						"height": 148,
+						"originX": 0.5368663594470046,
+						"originY": 1.5608108108108107,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4490667,
+						"collisionPoly": {
+							"points": [
+								0.0069124423963133645,
+								0.006756756756756757,
+								0.5368663594470046,
+								0.006756756756756757,
+								0.9953917050691244,
+								0.20945945945945946,
+								0.34101382488479265,
+								0.9864864864864865,
+								0.5368663594470046,
+								0.9864864864864865,
+								0.7304147465437788,
+								0.9864864864864865
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 877601174925679,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"name": "Event sheet 6",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "back button"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 228596736552376,
+					"parameters": {
+						"object": "Sprite19"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 338574623332413,
+					"parameters": {
+						"audio-file": "click3",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 165612033152361,
+					"parameters": {
+						"layout": "home"
+					}
+				}
+			],
+			"sid": 135375711032358
+		}
+	],
+	"sid": 561490977620613
+}

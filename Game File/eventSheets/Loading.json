@@ -1,0 +1,76 @@
+{
+	"name": "Loading",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 903645182918395
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SpriteFont",
+					"sid": 984693647261660,
+					"parameters": {
+						"instance-variable": "notDrag"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 209117507534838,
+					"parameters": {
+						"text": "round(loadingprogress*100) & \" /\""
+					}
+				}
+			],
+			"sid": 452287974795165
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-loader-layout-complete",
+					"objectClass": "System",
+					"sid": 899989686143407
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 250895374630186,
+					"parameters": {
+						"audio-file": "click3",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 312280774142843,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 534384427943420,
+					"parameters": {
+						"layout": "Intro"
+					}
+				}
+			],
+			"sid": 324709907012466
+		}
+	],
+	"sid": 797527853455207
+}

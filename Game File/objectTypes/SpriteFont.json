@@ -1,0 +1,48 @@
+{
+	"name": "SpriteFont",
+	"plugin-id": "Spritefont2",
+	"sid": 526470053453835,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "isMoney",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 101309560525794
+		},
+		{
+			"name": "notDrag",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 203839174537270
+		},
+		{
+			"name": "referTo",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 604300649715244
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 284437590556903
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8227598,
+		"useCollisionPoly": true
+	}
+}

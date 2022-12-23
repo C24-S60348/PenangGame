@@ -1,0 +1,113 @@
+{
+	"name": "btnUse",
+	"plugin-id": "Sprite",
+	"sid": 104175648730499,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 290103951826961
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 26,
+						"height": 15,
+						"originX": 0.5384615384615384,
+						"originY": 0.5333333333333333,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2918978,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 694991218968722,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 18,
+						"height": 15,
+						"originX": 0.3333333333333333,
+						"originY": 0.5333333333333333,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2694172,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 316013335917134,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 29,
+						"height": 15,
+						"originX": 0.20689655172413793,
+						"originY": 0.5333333333333333,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5555982,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.6206896551724138,
+								0,
+								0.6206896551724138,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 122,
+						"height": 26,
+						"originX": 0.5081967213114754,
+						"originY": 0.6153846153846154,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4520714,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 721938470555703,
+				"name": "Animation 3",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

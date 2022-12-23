@@ -1,0 +1,416 @@
+{
+	"name": "ButtonClick",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "money",
+			"type": "number",
+			"initialValue": "50",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 378903899986686
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_NAMA",
+			"type": "string",
+			"initialValue": "SAVE_NAMA",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 932525129573391
+		},
+		{
+			"eventType": "variable",
+			"name": "SAVE_COINS",
+			"type": "string",
+			"initialValue": "SAVE_COINS",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 208985952244260
+		},
+		{
+			"eventType": "comment",
+			"text": "cardbawah"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 205832460446040,
+					"parameters": {
+						"object": "CardBawah"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "CardBawah",
+					"sid": 455505332805009,
+					"parameters": {
+						"instance-variable": "isOnOff"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 147316577529880,
+					"parameters": {
+						"audio-file": "click3",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 965746826551095,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CardBawah",
+							"sid": 450710085030573,
+							"parameters": {
+								"instance-variable": "item",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 269144542092863,
+							"parameters": {
+								"layout": "Shop"
+							}
+						}
+					],
+					"sid": 625864038830722
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 957270381321637
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CardBawah",
+							"sid": 953913720741959,
+							"parameters": {
+								"instance-variable": "item",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 207237012734216,
+							"parameters": {
+								"layout": "home"
+							}
+						}
+					],
+					"sid": 995772154046323
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 852859077733681
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CardBawah",
+							"sid": 501622411013646,
+							"parameters": {
+								"instance-variable": "item",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 170443259922544,
+							"parameters": {
+								"layout": "Choose Levels Layout"
+							}
+						}
+					],
+					"sid": 232862510100295
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 124696657680613
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CardBawah",
+							"sid": 675616705529683,
+							"parameters": {
+								"instance-variable": "item",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 340635972364980,
+							"parameters": {
+								"layout": "Map"
+							}
+						}
+					],
+					"sid": 360111372894140
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "set money & character animatino"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 694265004351261
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SpriteFont",
+					"sid": 219725060941316,
+					"parameters": {
+						"instance-variable": "isMoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 196218496467451,
+					"parameters": {
+						"text": "money"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite",
+					"sid": 423170918124662,
+					"parameters": {
+						"animation": "characterName",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 614380609208080
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 536978846980818
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Characterss",
+					"sid": 729832716281988,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "garisan",
+					"sid": 438647702650846,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Sprite9",
+					"sid": 179148122593805,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Pets",
+					"sid": 336020568758793,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "btnUse",
+					"sid": 847899106311394,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "flashlight",
+					"sid": 419680226403139,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "tambahItem",
+					"sid": 512840027131950,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 426167171952851,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "SpriteFont",
+							"sid": 505243439875682,
+							"parameters": {
+								"instance-variable": "notDrag"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Sprite4",
+							"sid": 130392855402217,
+							"parameters": {
+								"instance-variable": "notDrag"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "SpriteFont",
+							"sid": 247152892680756,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "dragger",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Sprite4",
+							"sid": 268733436139966,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "dragger",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 890268127249839
+				}
+			]
+		}
+	],
+	"sid": 164528087870957
+}

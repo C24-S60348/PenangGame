@@ -1,0 +1,57 @@
+{
+	"name": "dryleaf",
+	"plugin-id": "Sprite",
+	"sid": 644243767082142,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 418,
+						"height": 422,
+						"originX": 0.48086124401913877,
+						"originY": 0.48104265402843605,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8915290,
+						"collisionPoly": {
+							"points": [
+								0.3133971291866029,
+								0.31516587677725116,
+								0.48086124401913877,
+								0.07345971563981042,
+								0.6196172248803827,
+								0.3412322274881517,
+								0.8803827751196173,
+								0.48104265402843605,
+								0.8636363636363636,
+								0.8601895734597157,
+								0.48086124401913877,
+								0.8744075829383886,
+								0.12679425837320574,
+								0.8293838862559242,
+								0.05263157894736842,
+								0.48104265402843605
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 607861459091122,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

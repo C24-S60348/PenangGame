@@ -1,0 +1,918 @@
+{
+	"name": "Shop",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "petName",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 236297290977511
+		},
+		{
+			"eventType": "variable",
+			"name": "unlockedThing",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 306807142674415
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ButtonClick"
+		},
+		{
+			"eventType": "comment",
+			"text": "pilih character"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 618117496275268,
+					"parameters": {
+						"object": "Characterss"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 517926508979093,
+					"parameters": {
+						"audio-file": "click3",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 337315739874393,
+					"parameters": {
+						"variable": "characterName",
+						"value": "Characterss.namaOrang"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "messagebox",
+					"sid": 564781143060538,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "messagebox",
+					"sid": 299724546791427,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "messagebox",
+					"sid": 306057400191783,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 804443032131685,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "messagebox",
+					"sid": 194328350470873,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 927081472309078
+		},
+		{
+			"eventType": "comment",
+			"text": "pilih pets&locked"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 783509087723077,
+					"parameters": {
+						"object": "Pets"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SpriteFont",
+					"sid": 792230366785923,
+					"parameters": {
+						"instance-variable": "referTo",
+						"comparison": 0,
+						"value": "Pets.namaPet"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite4",
+					"sid": 704923212082926,
+					"parameters": {
+						"instance-variable": "referTo",
+						"comparison": 0,
+						"value": "Pets.namaPet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 172204536833829,
+					"parameters": {
+						"audio-file": "click3",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 321359180709468,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "is locked, cuba beli"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Pets",
+							"sid": 968964105410234,
+							"parameters": {
+								"instance-variable": "isLocked"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 512275793289798,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "DUIT CUKUP"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 877629188293384,
+									"parameters": {
+										"first-value": "int(SpriteFont.Text)",
+										"comparison": 3,
+										"second-value": "money"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 871139728888551,
+									"parameters": {
+										"variable": "petName",
+										"value": "Pets.namaPet"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 958366120365262,
+									"parameters": {
+										"variable": "money",
+										"value": "int(SpriteFont.Text)"
+									}
+								},
+								{
+									"callFunction": "refreshMoney",
+									"sid": 704879851081263
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 496643772222449,
+									"parameters": {
+										"key": "SAVE_COINS",
+										"value": "money"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 541719786298967,
+									"parameters": {
+										"variable": "unlockedThing",
+										"value": "unlockedThing & \",\" & Pets.namaPet "
+									}
+								},
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 692875327622655,
+									"parameters": {
+										"key": "SAVE_UNLOCKED_THING",
+										"value": "unlockedThing"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Pets",
+									"sid": 952828666610213,
+									"parameters": {
+										"instance-variable": "isLocked",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Sprite4",
+									"sid": 458470190172953,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "SpriteFont",
+									"sid": 573724294866808,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Pets",
+									"sid": 326552876912603,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "messagebox",
+									"sid": 176248738368770,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "messagebox",
+									"sid": 181669764805298,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "messagebox",
+									"sid": 286677104002975,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "1.0"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 185338947031822,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "messagebox",
+									"sid": 162238451297669,
+									"parameters": {
+										"opacity": "0"
+									}
+								}
+							],
+							"sid": 440643793316054
+						},
+						{
+							"eventType": "comment",
+							"text": "DUIT TAK CUKUP"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 480872606842591
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "messagebox",
+									"sid": 634068275309433,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "messagebox",
+									"sid": 185022960582810,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "messagebox",
+									"sid": 864796041845185,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "1.0"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 771200179015635,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "messagebox",
+									"sid": 836411333321577,
+									"parameters": {
+										"opacity": "0"
+									}
+								}
+							],
+							"sid": 649528304820387
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 616121142514839
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 196954528489352,
+							"parameters": {
+								"variable": "petName",
+								"value": "Pets.namaPet"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "messagebox",
+							"sid": 808467378107227,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "messagebox",
+							"sid": 855164192729721,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "messagebox",
+							"sid": 992835451783045,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 749498994900015,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "messagebox",
+							"sid": 142037842974181,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 616460443561847
+				}
+			]
+		},
+		{
+			"functionName": "refreshMoney",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SpriteFont",
+					"sid": 857318998052273,
+					"parameters": {
+						"instance-variable": "isMoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 448640615008953,
+					"parameters": {
+						"text": "money"
+					}
+				}
+			],
+			"sid": 649781611220392
+		},
+		{
+			"eventType": "comment",
+			"text": "START"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 128755561409266
+				}
+			],
+			"actions": [],
+			"sid": 415729888753819,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 750143300568175,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "0",
+								"end-index": "tokencount(unlockedThing, \",\")"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Pets",
+							"sid": 358078733017015,
+							"parameters": {
+								"instance-variable": "namaPet",
+								"comparison": 0,
+								"value": "tokenat(unlockedThing, loopindex, \",\")"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SpriteFont",
+							"sid": 446987113732485,
+							"parameters": {
+								"instance-variable": "referTo",
+								"comparison": 0,
+								"value": "Pets.namaPet"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Sprite4",
+							"sid": 838809957097221,
+							"parameters": {
+								"instance-variable": "referTo",
+								"comparison": 0,
+								"value": "Pets.namaPet"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Pets",
+							"sid": 334320230187116,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Pets",
+							"sid": 473215902950747,
+							"parameters": {
+								"instance-variable": "isLocked",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SpriteFont",
+							"sid": 223219682721855,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Sprite4",
+							"sid": 565603571742464,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 704571328716637
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 786647223807843,
+					"parameters": {
+						"object": "btnUse"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "remove-item",
+					"objectClass": "LocalStorage",
+					"sid": 191009898429710,
+					"parameters": {
+						"key": "SAVE_UNLOCKED_THING"
+					}
+				}
+			],
+			"sid": 473653073112013
+		},
+		{
+			"eventType": "comment",
+			"text": "taknak pet"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 505452417720052,
+					"parameters": {
+						"object": "tambahItem2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 278642112884651,
+					"parameters": {
+						"variable": "petName",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "messagebox",
+					"sid": 223572686485521,
+					"parameters": {
+						"frame-number": "3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "messagebox",
+					"sid": 406661036289564,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "messagebox",
+					"sid": 838905680803188,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 798831166730576,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "messagebox",
+					"sid": 387651686730196,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 620534124321747
+		},
+		{
+			"eventType": "comment",
+			"text": "banyakkan duit, hilangkan storage"
+		},
+		{
+			"eventType": "variable",
+			"name": "cheat",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 216403630214644
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 625248241159950,
+					"parameters": {
+						"object": "Sprite4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 138019529373309,
+					"parameters": {
+						"variable": "cheat",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 937555859149806,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "activate cheat"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 981594648861866,
+							"parameters": {
+								"variable": "cheat",
+								"comparison": 5,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 933231576120137,
+							"parameters": {
+								"variable": "money",
+								"value": "500"
+							}
+						},
+						{
+							"id": "set-item",
+							"objectClass": "LocalStorage",
+							"sid": 620570391589545,
+							"parameters": {
+								"key": "SAVE_COINS",
+								"value": "money"
+							}
+						},
+						{
+							"callFunction": "refreshMoney",
+							"sid": 632787440931388
+						}
+					],
+					"sid": 174172482021700
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 805736646901751,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 858916652883144,
+							"parameters": {
+								"variable": "cheat",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 238491231165446
+				}
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "cheat2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 738013334023399
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 794904940833735,
+					"parameters": {
+						"object": "SpriteFont"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SpriteFont",
+					"sid": 398875579584226,
+					"parameters": {
+						"instance-variable": "isMoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 950203434061504,
+					"parameters": {
+						"variable": "cheat2",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 470579760471602,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "activate cheat"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 694597206321292,
+							"parameters": {
+								"variable": "cheat2",
+								"comparison": 5,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "clear-storage",
+							"objectClass": "LocalStorage",
+							"sid": 286778935212916
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 387060541749678,
+							"parameters": {
+								"variable": "money",
+								"value": "50"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 608614639306089,
+							"parameters": {
+								"variable": "unlockedThing",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 864521939479941,
+							"parameters": {
+								"layout": "home"
+							}
+						}
+					],
+					"sid": 843908194835679
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 817787542206466,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 953388370271024,
+							"parameters": {
+								"variable": "cheat2",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 440465378279889
+				}
+			]
+		}
+	],
+	"sid": 527511487892781
+}

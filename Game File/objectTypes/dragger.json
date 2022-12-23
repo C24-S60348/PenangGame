@@ -1,0 +1,63 @@
+{
+	"name": "dragger",
+	"plugin-id": "Sprite",
+	"sid": 320366260738879,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "lockNumber",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 995387239536953
+		},
+		{
+			"name": "numbertest",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 654833997743020
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 465222205327090
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 292397318897421
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2883719,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 967026772757113,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

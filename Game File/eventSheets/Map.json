@@ -1,0 +1,118 @@
+{
+	"name": "Map",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ButtonClick"
+		},
+		{
+			"eventType": "comment",
+			"text": "MAPPPP"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "dragger",
+					"sid": 938159325597203,
+					"parameters": {
+						"comparison": 2,
+						"y-co-ordinate": "-200"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "dragger",
+					"sid": 681309261721564,
+					"parameters": {
+						"y": "-200"
+					}
+				}
+			],
+			"sid": 313432111927656
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "dragger",
+					"sid": 727794828401107,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "dragger",
+					"sid": 978497234971501,
+					"parameters": {
+						"y": "0"
+					}
+				}
+			],
+			"sid": 427993208783717
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 761084346759688,
+					"parameters": {
+						"object": "Sprite9"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 972191505760279
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 344309025216079,
+					"disabled": true,
+					"parameters": {
+						"audio-file": "startgame",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 398313535531637,
+					"parameters": {
+						"audio-file": "during_gamebgmusic",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"start\""
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 307393527680058,
+					"parameters": {
+						"layout": "Sprite9.namaLevel"
+					}
+				}
+			],
+			"sid": 986383417210221
+		}
+	],
+	"sid": 883124202866085
+}

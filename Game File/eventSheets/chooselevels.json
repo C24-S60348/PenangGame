@@ -1,0 +1,274 @@
+{
+	"name": "chooselevels",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 776013034661430
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Sprite24",
+					"sid": 316571127027700,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "UntitledDesign2",
+					"sid": 820266564959737,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 789149839282609
+		},
+		{
+			"eventType": "comment",
+			"text": "had  limit"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "dragger",
+					"sid": 213235627658877,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "int(tokenat(dragger.lockNumber,0,\",\")) + 50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "dragger",
+					"sid": 146589736982313,
+					"parameters": {
+						"x": "90"
+					}
+				}
+			],
+			"sid": 957833445791005
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "dragger",
+					"sid": 597805042728538,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "int(tokenat(dragger.lockNumber,tokencount(dragger.lockNumber,\",\")-1,\",\")) - 50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "dragger",
+					"sid": 134123335882153,
+					"parameters": {
+						"x": "int(tokenat(dragger.lockNumber,tokencount(dragger.lockNumber,\",\")-1,\",\")) - 50"
+					}
+				}
+			],
+			"sid": 117244536517061
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 635859650835392
+				}
+			],
+			"actions": [],
+			"sid": 220490520699708,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 601674090611017,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 0, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X+250"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 624892911320005,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 0, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						}
+					],
+					"sid": 998355593520599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 559313478640953
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 180583340152637,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 1, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X +250"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 120646752654256,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 1, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						}
+					],
+					"sid": 488565076010388
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 782468370282490
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 439337842804393,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 2, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X +250"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 866310125510100,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 2, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						}
+					],
+					"sid": 739833137617502
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 780974690835436
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "UntitledDesign2",
+					"sid": 552819915825864,
+					"parameters": {
+						"width": "432 - abs(Self.X - 360)/5"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "Sprite24",
+					"sid": 856911412857903,
+					"parameters": {
+						"width": "413 - abs(Self.X-360)/5"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "UntitledDesign2",
+					"sid": 217038396979933,
+					"parameters": {
+						"height": "436 - abs(Self.X-360)/5"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "Sprite24",
+					"sid": 959883059901130,
+					"parameters": {
+						"height": "296 - abs(Self.X-360)/5"
+					}
+				}
+			],
+			"sid": 137887421116939
+		}
+	],
+	"sid": 877769110619790
+}

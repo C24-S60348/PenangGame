@@ -1,0 +1,43 @@
+{
+	"name": "tambahItem2",
+	"plugin-id": "Sprite",
+	"sid": 921277364754060,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 746125715880230
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 25,
+						"height": 22,
+						"originX": 0.54,
+						"originY": 0.6136363636363636,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5704536,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 698945339768992,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

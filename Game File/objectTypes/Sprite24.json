@@ -1,0 +1,206 @@
+{
+	"name": "Sprite24",
+	"plugin-id": "Sprite",
+	"sid": 980796764902159,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "sizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 319014803651609
+		},
+		{
+			"name": "sizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 460370186529224
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 446084435198081
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1082,
+						"height": 1082,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7665019,
+						"collisionPoly": {
+							"points": [
+								0.0009242144177449168,
+								0.0009242144177449168,
+								0.5,
+								0.0009242144177449168,
+								0.997079482439926,
+								0.0009242144177449168,
+								0.997079482439926,
+								0.5,
+								0.997079482439926,
+								0.997079482439926,
+								0.5,
+								0.997079482439926,
+								0.0009242144177449168,
+								0.997079482439926,
+								0.0009242144177449168,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1082,
+						"height": 1082,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1339344,
+						"collisionPoly": {
+							"points": [
+								0.0009242144177449168,
+								0.0009242144177449168,
+								0.5,
+								0.0009242144177449168,
+								0.9985767097966729,
+								0.0009242144177449168,
+								0.9985767097966729,
+								0.5,
+								0.9985767097966729,
+								0.9985767097966729,
+								0.5,
+								0.9985767097966729,
+								0.0009242144177449168,
+								0.9985767097966729,
+								0.0009242144177449168,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 500,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9793908,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.998,
+								0,
+								0.998,
+								0.5,
+								0.998,
+								0.998,
+								0.5,
+								0.998,
+								0,
+								0.998,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 502,
+						"height": 502,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9037791,
+						"collisionPoly": {
+							"points": [
+								0.003976127363057729,
+								0.003976127363057729,
+								0.5,
+								0.003976127363057729,
+								0.9940397771463945,
+								0.003976127363057729,
+								0.9940397771463945,
+								0.5,
+								0.9940397771463945,
+								0.9940397771463945,
+								0.5,
+								0.9940397771463945,
+								0.003976127363057729,
+								0.9940397771463945,
+								0.003976127363057729,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 500,
+						"height": 500,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6096045,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.998,
+								0,
+								0.998,
+								0.5,
+								0.998,
+								0.998,
+								0.5,
+								0.998,
+								0,
+								0.998,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 263991699557406,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

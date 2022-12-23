@@ -1,0 +1,53 @@
+{
+	"name": "flower2",
+	"plugin-id": "Sprite",
+	"sid": 864283606641583,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 184,
+						"height": 464,
+						"originX": 1.298913043478261,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7669737,
+						"collisionPoly": {
+							"points": [
+								0.483695652173913,
+								0.17672413793103448,
+								0.9891304347826086,
+								0.6206896551724138,
+								0.6956521739130435,
+								0.5,
+								0.5,
+								0.18318965517241378,
+								0.3858695652173913,
+								0.8599137931034483,
+								0.5978260869565217,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 223135553806627,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

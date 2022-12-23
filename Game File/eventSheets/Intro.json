@@ -1,0 +1,123 @@
+{
+	"name": "Intro",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "keluarkan Button SKIP dalam 3 saat"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 609705253649728
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "btnUse",
+					"sid": 356065057733085,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 872235378833098,
+					"parameters": {
+						"seconds": "0.02"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "btnUse",
+					"sid": 952613481861448,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 839159270480193,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "btnUse",
+					"sid": 154935273376833,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 136006669277531
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 857697041763872,
+					"parameters": {
+						"object": "btnUse"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "btnUse",
+					"sid": 593713714618937
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 441128247723734,
+					"parameters": {
+						"audio-file": "click3",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 849376196081922,
+					"parameters": {
+						"layout": "home"
+					}
+				}
+			],
+			"sid": 512198710999202
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-ended",
+					"objectClass": "Video",
+					"sid": 182182423511344
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 405360931379233,
+					"parameters": {
+						"layout": "home"
+					}
+				}
+			],
+			"sid": 309555106266627
+		}
+	],
+	"sid": 743591115333584
+}

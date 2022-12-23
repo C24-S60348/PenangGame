@@ -1,0 +1,278 @@
+{
+	"name": "Main",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "SAVE_UNLOCKED_THING",
+			"type": "string",
+			"initialValue": "SAVE_UNLOCKED_THING",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 858950115498390
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ButtonClick"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 851507362246026,
+					"parameters": {
+						"object": "play"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 816877292030143,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "go to level"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "play",
+							"sid": 971697050236857,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 167913196822744
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 346319223829501,
+							"parameters": {
+								"audio-file": "during_gamebgmusic",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"start\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 501504235831550,
+							"parameters": {
+								"layout": "Layout 1"
+							}
+						}
+					],
+					"sid": 429037275318300
+				},
+				{
+					"eventType": "comment",
+					"text": "about us"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 935067956851718
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "play",
+							"sid": 493357683000667,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 290267916006211,
+							"parameters": {
+								"audio-file": "click3",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 249800473289909,
+							"parameters": {
+								"layout": "about us"
+							}
+						}
+					],
+					"sid": 938825174140777
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "start - bg music"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 310181672310405
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 887247192039151,
+					"parameters": {
+						"audio-file": "backgroundmusic",
+						"loop": "looping",
+						"volume": "10",
+						"stereo-pan": "0",
+						"tag-optional": "\"bg\""
+					}
+				},
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 458862028496730,
+					"parameters": {
+						"key": "SAVE_COINS"
+					}
+				}
+			],
+			"sid": 890712258926810
+		},
+		{
+			"eventType": "comment",
+			"text": "Dapatkan data kat localstorage"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 734742517582295,
+					"parameters": {
+						"key": "SAVE_COINS"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 231893531328719,
+					"parameters": {
+						"key": "SAVE_COINS"
+					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 161033162032923,
+					"parameters": {
+						"key": "SAVE_UNLOCKED_THING"
+					}
+				}
+			],
+			"sid": 234874029458760
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 634125308408187,
+					"parameters": {
+						"key": "SAVE_COINS"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 654622436686450,
+					"parameters": {
+						"variable": "money",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 567383493423884,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "SpriteFont",
+							"sid": 464929098949341,
+							"parameters": {
+								"instance-variable": "isMoney"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont",
+							"sid": 562630396981060,
+							"parameters": {
+								"text": "money"
+							}
+						}
+					],
+					"sid": 820025690824974
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 536879285996556,
+					"parameters": {
+						"key": "SAVE_UNLOCKED_THING"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 122029559724111,
+					"parameters": {
+						"variable": "unlockedThing",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 741090542699097
+		}
+	],
+	"sid": 621771088166115
+}

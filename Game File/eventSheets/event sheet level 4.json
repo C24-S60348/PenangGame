@@ -1,0 +1,566 @@
+{
+	"name": "Event sheet Level 4",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "When the player is moving on the grass, disable direction control"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSkeleton",
+							"sid": 303387804292045,
+							"parameters": {
+								"object": "Sprite17_BackgroundLayout2"
+							}
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "PlayerSkeleton",
+							"sid": 212182606312657,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-controls",
+							"objectClass": "PlayerSkeleton",
+							"sid": 952848744656912,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"default-controls": false
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "PlayerSkeleton",
+							"sid": 607807682613165,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"speed": "1000"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "PlayerSkeleton",
+							"sid": 267204301974462,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"max-speed": "1000"
+							}
+						}
+					],
+					"sid": 731566017536087
+				},
+				{
+					"eventType": "comment",
+					"text": "When the player not moving (static) or not on the grass (win), enable direction control"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSkeleton",
+							"sid": 575423300841589,
+							"parameters": {
+								"object": "Sprite17_BackgroundLayout2"
+							}
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "PlayerSkeleton",
+							"sid": 347201262793607,
+							"behaviorType": "8Direction",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-controls",
+							"objectClass": "PlayerSkeleton",
+							"sid": 261489682446023,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"default-controls": true
+							}
+						}
+					],
+					"sid": 217229466285237,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "comment",
+					"text": "When the player is walking, play walk animation and bgm"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "PlayerSkeleton",
+							"sid": 412095287773883,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PlayerSkeleton",
+							"sid": 605185383811296,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 260795854573650
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 190289878131863,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "is-mirrored",
+							"objectClass": "PlayerSkeleton",
+							"sid": 207435024138267,
+							"isInverted": true
+						},
+						{
+							"id": "compare-speed",
+							"objectClass": "PlayerSkeleton",
+							"sid": 545532156151889,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"comparison": 0,
+								"speed": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "PlayerSkeleton",
+							"sid": 685298109405677,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 986643139357724,
+							"parameters": {
+								"audio-file": "sliding(walk)",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 248745258458772
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 870216781666893,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "compare-speed",
+							"objectClass": "PlayerSkeleton",
+							"sid": 168203606051173,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"comparison": 0,
+								"speed": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 870741121243107,
+							"parameters": {
+								"audio-file": "sliding(walk)",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 972544236521391
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 363179516802539,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "compare-speed",
+							"objectClass": "PlayerSkeleton",
+							"sid": 323094231305549,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"comparison": 0,
+								"speed": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 889819245395568,
+							"parameters": {
+								"audio-file": "sliding(walk)",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 460141595948299
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 378890195065240,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "is-mirrored",
+							"objectClass": "PlayerSkeleton",
+							"sid": 885355356224396
+						},
+						{
+							"id": "compare-speed",
+							"objectClass": "PlayerSkeleton",
+							"sid": 974420554130027,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"comparison": 0,
+								"speed": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "PlayerSkeleton",
+							"sid": 436635593543541,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 520545659382202,
+							"parameters": {
+								"audio-file": "sliding(walk)",
+								"loop": "not-looping",
+								"volume": "-10",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 364258315382656
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 177192381601530
+				}
+			],
+			"sid": 100709052316044
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Starting Point",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-outside-layout",
+							"objectClass": "PlayerSkeleton",
+							"sid": 173141257934288
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PlayerSkeleton",
+							"sid": 447852335878571,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 822525232678331
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 319321575075162,
+							"parameters": {
+								"object": "play"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PlayerSkeleton",
+							"sid": 392611883950841,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PlayerSkeleton",
+							"sid": 425499927261257,
+							"parameters": {
+								"x": "play.X",
+								"y": "play.Y-15"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "play",
+							"sid": 331356669223723,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 501338827754590
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerSkeleton",
+							"sid": 643260369772448,
+							"parameters": {
+								"object": "Sprite3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sprite3",
+							"sid": 712511831874420
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 915749287402527,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 952908457245042,
+							"parameters": {
+								"layout": "home"
+							}
+						}
+					],
+					"sid": 962634876569238
+				}
+			],
+			"sid": 669987292673153
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Reaching End Point",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [],
+			"sid": 358135029321705,
+			"text-color": [
+				1,
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Camera",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 935265483634183
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Camera",
+							"sid": 851517960759936,
+							"parameters": {
+								"x": "lerp(Self.X,PlayerSkeleton.X,1)",
+								"y": "lerp(Self.Y,PlayerSkeleton.Y,1)"
+							}
+						}
+					],
+					"sid": 403520118933575
+				}
+			],
+			"sid": 624511240528874
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Hint",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 126450790557551
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 106954757693938,
+							"parameters": {
+								"layer": "\"Hint Layer\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 327174000200870
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 513776998151416,
+							"parameters": {
+								"object": "Hint_button_Layout2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 641690673940929,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 272210965625014,
+									"parameters": {
+										"layer": "\"Hint Layer\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 177095617280789,
+									"parameters": {
+										"layer": "\"Hint Layer\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 695778564916830
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 233122640826426
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 616747142356820,
+									"parameters": {
+										"layer": "\"Hint Layer\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 876423009150088
+						}
+					]
+				}
+			],
+			"sid": 964378057636884
+		}
+	],
+	"sid": 711607151603571
+}

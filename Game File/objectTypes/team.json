@@ -1,0 +1,57 @@
+{
+	"name": "team",
+	"plugin-id": "Sprite",
+	"sid": 284284189204507,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 272,
+						"height": 260,
+						"originX": 0.44485294117647056,
+						"originY": 0.38846153846153847,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9598808,
+						"collisionPoly": {
+							"points": [
+								0.08455882352941177,
+								0.011538461538461539,
+								0.44485294117647056,
+								0.3384615384615385,
+								0.8014705882352942,
+								0.011538461538461539,
+								0.9338235294117647,
+								0.38846153846153847,
+								0.9558823529411765,
+								0.9230769230769231,
+								0.44485294117647056,
+								0.4230769230769231,
+								0.05514705882352941,
+								0.7923076923076923,
+								0.07720588235294118,
+								0.38846153846153847
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 718523602817224,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

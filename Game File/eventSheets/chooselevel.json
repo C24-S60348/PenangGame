@@ -1,0 +1,503 @@
+{
+	"name": "chooselevel",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ButtonClick"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 125141634700626
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Sprite24",
+					"sid": 910577497439653,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "UntitledDesign2",
+					"sid": 849809882119517,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "dragger",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "UntitledDesign2",
+					"sid": 568471641244638,
+					"parameters": {
+						"instance-variable": "sizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "UntitledDesign2",
+					"sid": 870632754989762,
+					"parameters": {
+						"instance-variable": "sizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Sprite24",
+					"sid": 873587289001038,
+					"parameters": {
+						"instance-variable": "sizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Sprite24",
+					"sid": 872259388183181,
+					"parameters": {
+						"instance-variable": "sizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "dragger",
+					"sid": 407862211893809,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetX",
+						"end-value": "int(tokenat(dragger.lockNumber, 0, \",\"))",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont3",
+					"sid": 934962140269411,
+					"parameters": {
+						"text": "\"This planet has wholly fallen into chaos and orderless. You’ve been given a second chance to restructure and restore your peaceful planet by returning to the past. Suddenly, the portal tunnel becomes unstable and brings you dimension where the world is frictionless. When you look around, you realize you are stuck in a maze.\""
+					}
+				}
+			],
+			"sid": 379184165658466
+		},
+		{
+			"eventType": "comment",
+			"text": "had  limit"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "dragger",
+					"sid": 157354754623350,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "90"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "dragger",
+					"sid": 667389809599917,
+					"parameters": {
+						"x": "90"
+					}
+				}
+			],
+			"sid": 720226235178619
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "dragger",
+					"sid": 923710399326916,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "-Self.Width + 720 -50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "dragger",
+					"sid": 897467288917552,
+					"parameters": {
+						"x": "-Self.Width + 720 -50"
+					}
+				}
+			],
+			"sid": 562932490700483
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 591608975174338
+				}
+			],
+			"actions": [],
+			"sid": 376822603957371,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 995260558074109,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 0, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X+325"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 938230637208576,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 0, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont3",
+							"sid": 659275818617237,
+							"parameters": {
+								"text": "\"This planet has wholly fallen into chaos and orderless. You’ve been given a second chance to restructure and restore your peaceful planet by returning to the past. Suddenly, the portal tunnel becomes unstable and brings you dimension where the world is frictionless. When you look around, you realize you are stuck in a maze.\""
+							}
+						}
+					],
+					"sid": 254992251256226
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 783514401139858
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 125419522623547,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 1, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X +325"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 524031794619252,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 1, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont3",
+							"sid": 857466055803023,
+							"parameters": {
+								"text": "\"The maze has completely lost the sense of time… All four seasons appear at the same time unpredictably.\""
+							}
+						}
+					],
+					"sid": 324238430743548
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 183975485813881
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 769060939986713,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 2, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X +325"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 822960857497938,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 2, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont3",
+							"sid": 588843607308902,
+							"parameters": {
+								"text": "\"You spot a mysterious giant blocking the way at the exit…you have no choice but to enter.\""
+							}
+						}
+					],
+					"sid": 642911847499169
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 251678644292520
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 111427942830967,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 3, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X +325"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 468764026533500,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 3, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont3",
+							"sid": 870321512292505,
+							"parameters": {
+								"text": "\"A cat-like creature wandering around seems like looking for something vital for them…\""
+							}
+						}
+					],
+					"sid": 368118161518401
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 843646804255377
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 844791537290951,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 4, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X +325"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 464937916433333,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 4, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont3",
+							"sid": 638246531384384,
+							"parameters": {
+								"text": "\"The moon is hanging in the sky…but wait! Is someone living on the moon？ I saw something moving…\""
+							}
+						}
+					],
+					"sid": 510963746334567
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 885412946012391
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 149069976351791,
+							"parameters": {
+								"first-value": "int(tokenat(dragger.lockNumber, 5, \",\"))",
+								"comparison": 3,
+								"second-value": "dragger.X +325"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "dragger",
+							"sid": 764837855664699,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetX",
+								"end-value": "int(tokenat(dragger.lockNumber, 5, \",\"))",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont3",
+							"sid": 641186169946312,
+							"parameters": {
+								"text": "\"The maze has completely lost the sense of time… All four seasons appear at the same time unpredictably.\""
+							}
+						}
+					],
+					"sid": 991837318684516
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 165353414781181
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "UntitledDesign2",
+					"sid": 524533765488805,
+					"parameters": {
+						"width": "Self.sizeX - abs(Self.X - 360)/5"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "Sprite24",
+					"sid": 769804786739870,
+					"parameters": {
+						"width": "Self.sizeX - abs(Self.X-360)/5"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "UntitledDesign2",
+					"sid": 100573231269785,
+					"parameters": {
+						"height": "Self.sizeY - abs(Self.X-360)/5"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "Sprite24",
+					"sid": 431256566313091,
+					"parameters": {
+						"height": "Self.sizeY- abs(Self.X-360)/5"
+					}
+				}
+			],
+			"sid": 842892045776455
+		}
+	],
+	"sid": 744758322301078
+}

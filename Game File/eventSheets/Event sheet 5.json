@@ -1,0 +1,547 @@
+{
+	"name": "Event sheet 5",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Event sheet 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "ssCharacter",
+					"sid": 722183905340631,
+					"parameters": {
+						"object": "tapak"
+					}
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "ssCharacter",
+					"sid": 651263891636839,
+					"behaviorType": "8Direction"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-controls",
+					"objectClass": "ssCharacter",
+					"sid": 609940299260004,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"default-controls": false
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "ssCharacter",
+					"sid": 469704570908459,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"speed": "1500"
+					}
+				}
+			],
+			"sid": 203832352740379
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "ssCharacter",
+					"sid": 393852736612518,
+					"parameters": {
+						"object": "tapak"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "ssCharacter",
+					"sid": 833982882285831,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-controls",
+					"objectClass": "ssCharacter",
+					"sid": 116944301720119,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"default-controls": true
+					}
+				}
+			],
+			"sid": 302453610956599,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ssCharacter",
+					"sid": 323283207640816,
+					"parameters": {
+						"object": "tilesyak"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "ssCharacter",
+					"sid": 741938013717473,
+					"behaviorType": "8Direction"
+				}
+			],
+			"sid": 596760744350576
+		},
+		{
+			"eventType": "comment",
+			"text": "go back"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 366217118250087,
+					"parameters": {
+						"object": "BtnBack"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 968540116438182
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 229420531637295,
+					"parameters": {
+						"layout": "home"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 670578945037672,
+					"parameters": {
+						"variable": "countExit",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 978240978055828
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 309076092692254,
+					"parameters": {
+						"object": "Joystick2"
+					}
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "ssCharacter",
+					"sid": 475466992914634,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 451569704633570,
+					"parameters": {
+						"audio-file": "slide",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 216167817872655,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "up"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Joystick2",
+							"sid": 386788228433320,
+							"parameters": {
+								"instance-variable": "key",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "ssCharacter",
+							"sid": 274712877883687,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 394178321790172
+				},
+				{
+					"eventType": "comment",
+					"text": "kanan"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Joystick2",
+							"sid": 764191503586874,
+							"parameters": {
+								"instance-variable": "key",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "ssCharacter",
+							"sid": 605248201146458,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "ssCharacter",
+							"sid": 596685444007315,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 602910429400833
+				},
+				{
+					"eventType": "comment",
+					"text": "kiri"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Joystick2",
+							"sid": 910850175451372,
+							"parameters": {
+								"instance-variable": "key",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "ssCharacter",
+							"sid": 213969019004486,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "ssCharacter",
+							"sid": 733919194178284,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 670197271492877
+				},
+				{
+					"eventType": "comment",
+					"text": "bwh"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Joystick2",
+							"sid": 233767202854626,
+							"parameters": {
+								"instance-variable": "key",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "ssCharacter",
+							"sid": 645143214043145,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 754811182910550
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 390132628311701
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "ssCharacter",
+					"sid": 126443525638690,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 635972195844072,
+					"parameters": {
+						"audio-file": "slide",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 411653972988279
+		},
+		{
+			"eventType": "comment",
+			"text": "feedback"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 114376420227766,
+					"parameters": {
+						"object": "Joystick2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Joystick2",
+					"sid": 961508647293174,
+					"parameters": {
+						"opacity": "70"
+					}
+				}
+			],
+			"sid": 789036176547166
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 689367070585667
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Joystick2",
+					"sid": 125331557348587,
+					"parameters": {
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 444287022854772
+		},
+		{
+			"eventType": "comment",
+			"text": "menang"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ssCharacter",
+					"sid": 964817846980156,
+					"parameters": {
+						"object": "Sprite3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 833565404674055,
+					"parameters": {
+						"layout": "Sprite3.namaLevel"
+					}
+				}
+			],
+			"sid": 799264852044845
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 750996471927042
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SpriteFont",
+					"sid": 464372152888463,
+					"parameters": {
+						"instance-variable": "isMoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "ssCharacter",
+					"sid": 886513526714755,
+					"parameters": {
+						"animation": "characterName",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 383658721410448,
+					"parameters": {
+						"text": "money"
+					}
+				}
+			],
+			"sid": 661659324571198
+		},
+		{
+			"eventType": "comment",
+			"text": "dapat coins"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ssCharacter",
+					"sid": 492394315174221,
+					"parameters": {
+						"object": "Sprite4"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "SpriteFont",
+					"sid": 193413401150017,
+					"parameters": {
+						"instance-variable": "isMoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite4",
+					"sid": 428210653991380
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 929525837272064,
+					"parameters": {
+						"variable": "money",
+						"value": "10"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "SpriteFont",
+					"sid": 694773141384103,
+					"parameters": {
+						"text": "money"
+					}
+				}
+			],
+			"sid": 313374049301064
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 763547936104847
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 672829669040448,
+					"parameters": {
+						"audio-file": "startgame",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"start\""
+					}
+				}
+			],
+			"sid": 605313609779702
+		}
+	],
+	"sid": 812130125069154
+}

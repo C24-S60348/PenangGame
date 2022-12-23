@@ -1,0 +1,99 @@
+{
+	"name": "Joystick2",
+	"plugin-id": "Sprite",
+	"sid": 459646473727991,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "key",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 939743565026234
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 850704336372709
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 315,
+						"height": 315,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5143737,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 81,
+						"height": 108,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2904179,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 106,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4252208,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 107,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 477812,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 81,
+						"height": 107,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2126008,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 928864870576184,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

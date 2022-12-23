@@ -1,0 +1,104 @@
+{
+	"name": "home",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "savemoney",
+			"type": "string",
+			"initialValue": "INFINITESLIDE_SAVEGAME_MONEY",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 151311858443329
+		},
+		{
+			"eventType": "variable",
+			"name": "savegame",
+			"type": "string",
+			"initialValue": "INFINITESLIDE_SAVEGAME",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 478161840477199
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ButtonClick"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 457763163503341
+				}
+			],
+			"actions": [
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 407673814753875,
+					"parameters": {
+						"key": "savemoney"
+					}
+				}
+			],
+			"sid": 180513639981482
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 549208862443205,
+					"parameters": {
+						"key": "savemoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 590534047927541,
+					"parameters": {
+						"key": "savemoney"
+					}
+				}
+			],
+			"sid": 559795317639602
+		},
+		{
+			"eventType": "comment",
+			"text": "dapatkan money data"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 928034595351111,
+					"parameters": {
+						"key": "savemoney"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 778485026551362,
+					"parameters": {
+						"variable": "money",
+						"value": "LocalStorage.ItemValue"
+					}
+				}
+			],
+			"sid": 258405711638259
+		}
+	],
+	"sid": 229854469688922
+}

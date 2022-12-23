@@ -1,0 +1,76 @@
+{
+	"name": "ssCharacter",
+	"plugin-id": "Sprite",
+	"sid": 269018371381054,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "moving",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 698487235269357
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 844916826007794
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 669115963621711
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 26,
+						"height": 26,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8396882,
+						"collisionPoly": {
+							"points": [
+								0.23076923076923078,
+								0.1987179792844332,
+								0.5,
+								0.19884615384615384,
+								0.770833333333333,
+								0.19884615384615384,
+								0.7707692307692308,
+								0.49615384615384617,
+								0.7707692307692308,
+								0.7748396824567741,
+								0.5,
+								0.7749999999999999,
+								0.23076923076923078,
+								0.7749999999999999,
+								0.23076923076923078,
+								0.4959936508765587
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 146427958892419,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

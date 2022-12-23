@@ -1,0 +1,57 @@
+{
+	"name": "rocket",
+	"plugin-id": "Sprite",
+	"sid": 257768062966258,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 282,
+						"height": 302,
+						"originX": 0.43617021276595747,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5365330,
+						"collisionPoly": {
+							"points": [
+								0.28368794326241137,
+								0.3576158940397351,
+								0.43617021276595747,
+								0.039735099337748346,
+								0.648936170212766,
+								0.2980132450331126,
+								0.7624113475177305,
+								0.5,
+								0.9645390070921985,
+								0.9933774834437086,
+								0.43617021276595747,
+								0.9933774834437086,
+								0.3829787234042553,
+								0.5463576158940397,
+								0.23049645390070922,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 969615912694856,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
