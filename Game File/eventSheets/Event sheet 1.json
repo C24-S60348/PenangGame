@@ -569,11 +569,11 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "Sprite3",
-							"sid": 334200508871171,
+							"sid": 931453571015986,
 							"parameters": {
 								"instance-variable": "namaLevel",
 								"comparison": 0,
-								"value": "\"Layout 3\""
+								"value": "\"home\""
 							}
 						}
 					],
