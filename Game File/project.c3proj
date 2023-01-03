@@ -526,12 +526,12 @@
 		]
 	},
 	"properties": {
-		"description": "",
+		"description": "A pixel sliding game",
 		"version": "1.0.0.0",
-		"author": "",
+		"author": "Afwan See Syakirah Afiq",
 		"authorEmail": "",
 		"authorWebsite": "",
-		"appId": "",
+		"appId": "com.pixelwarrior.pixelrush",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
