@@ -285,12 +285,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 368,
-						"y": 501,
-						"width": 209,
-						"height": 355,
-						"originX": 0.5454545454545454,
-						"originY": 0.43380281690140843,
+						"x": 362,
+						"y": 503,
+						"width": 402.56938588249477,
+						"height": 402.56938588249477,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

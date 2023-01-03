@@ -560,17 +560,87 @@
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 847882280255458,
+			"children": [
 				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 904368918147476,
-					"parameters": {
-						"layout": "Sprite3.namaLevel"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Sprite3",
+							"sid": 334200508871171,
+							"parameters": {
+								"instance-variable": "namaLevel",
+								"comparison": 0,
+								"value": "\"Layout 3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sprite3",
+							"sid": 531850864343029
+						},
+						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 298924812037371
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 424349540476679,
+							"parameters": {
+								"audio-file": "success",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 225383492600792,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 826369388588501,
+							"parameters": {
+								"layout": "home"
+							}
+						}
+					],
+					"sid": 421848387142851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 408944768407326
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 847161441579146,
+							"parameters": {
+								"layout": "Sprite3.namaLevel"
+							}
+						}
+					],
+					"sid": 226563601646450
 				}
-			],
-			"sid": 847882280255458
+			]
 		},
 		{
 			"eventType": "block",

@@ -321,6 +321,104 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 10
+			},
+			{
+				"frames": [
+					{
+						"width": 26,
+						"height": 26,
+						"originX": 0.5,
+						"originY": 0.5384615384615384,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9586802,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 166106330783067,
+				"name": "sphereChar",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 945502,
+						"collisionPoly": {
+							"points": [
+								0.8479998779296876,
+								0.4880000305175781,
+								0.8479998779296876,
+								0.9560000610351562,
+								0.15199981689453135,
+								0.9680000305175781,
+								0.1479998779296876,
+								0.6640000610351563,
+								0.1479998779296876,
+								0.4720001220703125,
+								0.1479998779296876,
+								0.23600006103515625,
+								0.16400009155273454,
+								0.12400021362304688,
+								0.8319996643066406,
+								0.13600003051757814
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9776788,
+						"collisionPoly": {
+							"points": [
+								0.8479998779296876,
+								0.4880000305175781,
+								0.8479998779296876,
+								0.9560000610351562,
+								0.15199981689453135,
+								0.9680000305175781,
+								0.1479998779296876,
+								0.6640000610351563,
+								0.1479998779296876,
+								0.4720001220703125,
+								0.1479998779296876,
+								0.23600006103515625,
+								0.1479998779296876,
+								0.09200006103515623,
+								0.8479998779296876,
+								0.09200006103515623
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 120757119595946,
+				"name": "skeletonChar",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			}
 		],
 		"subfolders": []

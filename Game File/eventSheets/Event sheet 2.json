@@ -2,6 +2,10 @@
 	"name": "Event sheet 2",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Event sheet 1"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Player Movement",
